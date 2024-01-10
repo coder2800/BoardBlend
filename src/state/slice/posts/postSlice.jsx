@@ -11,22 +11,22 @@ export const postsSlice = createSlice({
     name : "Posts",
     initialState,
     reducers: {
-        // AddPosts : {
-        //     reducer(state, action){
-        //         state.push(action.payload);
-        //     },
-        //     prepare(title, content){
-        //         return {
-        //             payload:{
-        //                 id: nanoid(),
-        //                 title,
-        //                 content
-        //             }
-        //         }
-        //     }
-        // }
+        AddPosts : {
+            reducer(state, action){
+                state.posts_array.push(action.payload);
+            },
+            prepare(title, content){
+                return {
+                    payload:{
+                        id: nanoid(),
+                        title,
+                        content
+                    }
+                }
+            }
+        }
     }
 })
-
 export const tempPostsVar = state => state.posts_state.posts_array;
+export const {AddPosts} = postsSlice.actions
 export default postsSlice.reducer

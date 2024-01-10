@@ -4,6 +4,33 @@
     padding: 2rem;
     text-align: center;
     min-width: 30vw;
-    font-family: cursive;
     border-radius: 0.5rem;
+}
+
+
+
+
+
+#add-post-form{
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+}
+#inputTitleDiv{
+    margin-bottom: 1rem;
+}
+#titleLabel{
+    margin-right: 1.3rem;
+}
+#Add-Post-Button{
+    margin-top: 1rem;
+    padding: 0.6rem;
+    border-radius: 1rem;
+    border: none;
+    font-weight: 600;
+}
+#Add-Post-Button:hover{
+    cursor: pointer;
+
 }
