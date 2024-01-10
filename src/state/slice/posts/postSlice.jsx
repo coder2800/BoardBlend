@@ -28,6 +28,5 @@ export const postsSlice = createSlice({
     }
 })
 
-
-
+export const tempPostsVar = state => state.posts_state.posts_array;
 export default postsSlice.reducer

@@ -1,0 +1,9 @@
+.post-box{
+    border: 1px solid white;
+    margin-top: 1rem;
+    padding: 2rem;
+    text-align: center;
+    min-width: 30vw;
+    font-family: cursive;
+    border-radius: 0.5rem;
+}
