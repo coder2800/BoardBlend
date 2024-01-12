@@ -7,10 +7,6 @@
     border-radius: 0.5rem;
 }
 
-
-
-
-
 #add-post-form{
     display: flex;
     flex-direction: column ;
@@ -32,5 +28,34 @@
 }
 #Add-Post-Button:hover{
     cursor: pointer;
+}
+.select-user{
+    margin-top: 1rem;
+}
+#postAuthor{
 
+    margin-left: 0.3vw;
+    min-width: 8.9vw;
+    text-align: center;
+}
+.PostsContainer{
+    overflow-y: scroll;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+
+    background-color: rgb(37, 37, 37);
+    
+    border-radius: 10px;
+    height: 65vh;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(119, 118, 118);
+    border: 1px solid white;
+    border-radius: 10px;
 }
