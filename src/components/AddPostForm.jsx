@@ -43,7 +43,7 @@ const AddPostForm = () => {
         <>
             <form id={styles.addPostForm}>
                 <div id={styles.inputTitleDiv}>
-                    <label id='titleLabel' htmlFor="addTitle">Title: </label>
+                    <label id={styles.titleLabel} htmlFor="addTitle">Title: </label>
                     <input type='text' id="addTitle" value={title} onChange={e=>setTitle(e.target.value)}/>
                 </div>
                 <div id='addPostContent'>
