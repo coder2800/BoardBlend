@@ -1,6 +1,7 @@
 This is a Bulletin Board where people can post stuff and also like the posts. This has been created using - 
 1. React + Vite
 2. Redux (for state management) - For managing the state of each feature slicing has been used. 
+3. CSS Modules
 
 # React + Vite
 
