@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { tempPostsVar } from '../state/slice/posts/postSlice';
-import "./Posts.css"
+import styles from "./Posts.module.css"
 import { selectAllUsers } from '../state/slice/users/userSlice';
 
 const Posts = () => {
@@ -13,21 +13,21 @@ const Posts = () => {
     }
 
     const renderedPosts = posts.map(post => (
-        <article key={post.id} className='post-box'>
-            <div className='post-title'>
+        <article key={post.id} className={styles.postBox}>
+            <div className={styles.postTitle}>
                 {post.title}
             </div>
-            <div className='post-content'>
+            <div className={styles.postContent}>
                 {post.content.substring(0, 100)}
             </div>
-            <div className="post-username">
+            <div className={styles.postUsername}>
                 Posted By: {userName(post.userId)}
             </div>
         </article>
     ))
     return (
         <>
-            <div className='PostsContainer'>
+            <div className={styles.PostsContainer}>
                 {renderedPosts}
             </div>
         </>

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import { AddPosts } from '../state/slice/posts/postSlice';
 import { selectAllUsers } from '../state/slice/users/userSlice';
-import "./Posts.css"
+import styles from "./Posts.module.css"
 
 const AddPostForm = () => {
     const [title, setTitle] = useState("")
@@ -41,23 +41,23 @@ const AddPostForm = () => {
     var nullCheck = Boolean(title) && Boolean(content) && Boolean(userId)
     return (
         <>
-            <form id='add-post-form'>
-                <div id='inputTitleDiv'>
-                    <label id='titleLabel' htmlFor="add-title">Title: </label>
-                    <input type='text' id='add-title' value={title} onChange={e=>setTitle(e.target.value)}/>
+            <form id={styles.addPostForm}>
+                <div id={styles.inputTitleDiv}>
+                    <label id='titleLabel' htmlFor="addTitle">Title: </label>
+                    <input type='text' id="addTitle" value={title} onChange={e=>setTitle(e.target.value)}/>
                 </div>
-                <div id='add-post-content'>
-                    <label htmlFor="add-content">Content: </label>
-                    <input type='text' id='add-content' value={content} onChange={e=>setContent(e.target.value)}/>
+                <div id='addPostContent'>
+                    <label htmlFor="addContent">Content: </label>
+                    <input type='text' id='addContent' value={content} onChange={e=>setContent(e.target.value)}/>
                 </div>
-                <div className="select-user">
+                <div className={styles.selectUser}>
                     Select User :
-                    <select id="postAuthor" value={userId} onChange={selectChanged}>
+                    <select id={styles.postAuthor} value={userId} onChange={selectChanged}>
                         <option value="blank">Select a user: </option>
                         {renderedUsers}
                     </select>
                 </div>
-                <button type='button' id='Add-Post-Button' onClick={buttonClicked} disabled={!nullCheck}>
+                <button type='button' id={styles.AddPostButton} onClick={buttonClicked} disabled={!nullCheck}>
                     Add Post
                 </button>
             </form>
