@@ -24,11 +24,19 @@ export const postsSlice = createSlice({
                         title,
                         content,
                         userId,
-                        date: new Date().toISOString()
+                        date: new Date().toISOString(),
+                        reactions: {
+                            thumbsUp: 0,
+                            wow: 0,
+                            heart: 0,
+                            rocket: 0,
+                            coffee: 0
+                        }
                     }
                 }
             }
-        }
+        },
+        reactionAdded
     }
 })
 export const tempPostsVar = state => state.posts_state.posts_array;
